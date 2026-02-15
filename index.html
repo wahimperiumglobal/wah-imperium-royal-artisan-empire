@@ -8,87 +8,153 @@
 /* Reset & Base */
 * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif; }
 body { background-color: #000; color: #FFD700; }
-/* Links */
 a { color: #FFD700; text-decoration: none; }
 /* Loading Screen */
-#loading { position: fixed; top:0; left:0; width:100%; height:100%; background:#000; display:flex; justify-content:center; align-items:center; flex-direction:column; z-index:9999; }
+#loading {
+  position: fixed;
+  top:0; left:0; width:100%; height:100%;
+  background:#000; display:flex; justify-content:center; align-items:center; flex-direction:column;
+  z-index:9999;
+}
 #loading img { width:120px; height:120px; margin-bottom:20px; }
-#loading h1 { font-size: 1.5rem; color: #FFD700; text-align:center; }
+#loading h1 { font-size:1.5rem; color:#FFD700; text-align:center; }
+
 /* Header */
-header { display:flex; justify-content:space-between; align-items:center; padding: 1rem 2rem; background-color: #111; border-bottom: 2px solid #FFD700; }
-header h1 { font-size: 1.4rem; }
+header { display:flex; justify-content:center; align-items:center; padding:1rem; background-color:#111; border-bottom:2px solid #FFD700; }
+header img { height:120px; width:auto; margin-right:1rem; }
+header h1 { font-size:1.5rem; text-align:center; }
+
 /* Categories */
-.categories { display:flex; flex-wrap: wrap; justify-content: center; padding: 2rem; gap:1rem; }
-.category { background-color: #111; border: 1px solid #FFD700; padding:1rem 1.5rem; border-radius:8px; cursor:pointer; transition: all 0.3s ease; min-width:200px; }
-.category:hover { background-color: #222; }
+.categories { display:flex; flex-wrap: wrap; justify-content:center; padding:2rem; gap:1rem; }
+.category {
+  background-color:#111; border:1px solid #FFD700; padding:1rem 1.5rem; border-radius:8px; cursor:pointer;
+  transition: all 0.3s ease; min-width:250px;
+}
+.category:hover { background-color:#222; }
+
 /* Subcategories */
-.subcategory-list { display:none; margin-top:10px; padding-left: 1rem; }
-.subcategory { padding:5px 0; border-bottom:1px dashed #FFD700; }
+.subcategory-list { display:none; margin-top:10px; padding-left:1rem; }
+.subcategory { padding:5px 0; border-bottom:1px dashed #FFD700; cursor:pointer; }
+.subcategory:hover { color:#fff; }
+
 /* Footer */
-footer { text-align:center; padding: 1rem; border-top:2px solid #FFD700; margin-top:2rem; }
+footer { text-align:center; padding:1rem; border-top:2px solid #FFD700; margin-top:2rem; }
 </style>
 </head>
 <body>
 
 <!-- Loading Screen -->
 <div id="loading">
-  <img src="WAH_logo.png" alt="WAH Logo">
+  <img src="data:image/png;base64,INSERT_YOUR_BASE64_HERE" alt="WAH Imperium Royal Artisan Empire Logo">
   <h1>WAH Imperium Royal Artisan Empire Global Limited</h1>
 </div>
 
 <!-- Header -->
 <header>
+  <img src="data:image/png;base64,INSERT_YOUR_BASE64_HERE" alt="WAH Logo">
   <h1>WAH Imperium Royal Artisan Empire Global Limited</h1>
 </header>
 
 <!-- Categories -->
 <div class="categories">
+
+  <!-- Building / Video Construction -->
   <div class="category" onclick="toggleSub(this)">
-    Video Construction
+    Building / Video Construction
     <div class="subcategory-list">
+      <div class="subcategory">Architect / Architectural Drawing</div>
+      <div class="subcategory">Engineering</div>
+      <div class="subcategory">Contractor / Supervisor</div>
       <div class="subcategory">Carpentry</div>
-      <div class="subcategory">Bricklaying</div>
-      <div class="subcategory">Welding</div>
+      <div class="subcategory">Bricklayer</div>
+      <div class="subcategory">Welder</div>
+      <div class="subcategory">Plumber</div>
+      <div class="subcategory">Electrician</div>
+      <div class="subcategory">Painter</div>
+      <div class="subcategory">AC Installation / Maintenance</div>
+      <div class="subcategory">Aluminium Windows / POPs</div>
+      <div class="subcategory">Solar Installation</div>
+      <div class="subcategory">Furniture</div>
+      <div class="subcategory">Materials Buying / Selling</div>
+      <div class="subcategory">Join Team / Give Work / Need Work</div>
     </div>
   </div>
+
+  <!-- Livestock -->
   <div class="category" onclick="toggleSub(this)">
     Livestock
     <div class="subcategory-list">
       <div class="subcategory">Cattle</div>
       <div class="subcategory">Goats</div>
       <div class="subcategory">Poultry</div>
+      <div class="subcategory">Catfish</div>
+      <div class="subcategory">Material Sellers</div>
+      <div class="subcategory">Skill Agents</div>
+      <div class="subcategory">Join Team / Give Work / Need Work</div>
     </div>
   </div>
+
+  <!-- Fashion & Design -->
   <div class="category" onclick="toggleSub(this)">
     Fashion & Design
     <div class="subcategory-list">
       <div class="subcategory">Tailoring</div>
       <div class="subcategory">Textiles</div>
+      <div class="subcategory">Garment Making</div>
+      <div class="subcategory">Workers / Buyers</div>
+      <div class="subcategory">Join Team / Give Work / Need Work</div>
     </div>
   </div>
+
+  <!-- Technical / Electronics -->
   <div class="category" onclick="toggleSub(this)">
-    Technical & Beauty
+    Technical / Electronics
     <div class="subcategory-list">
-      <div class="subcategory">Electrical</div>
-      <div class="subcategory">Plumbing</div>
-      <div class="subcategory">Hair & Makeup</div>
+      <div class="subcategory">Phone Repair</div>
+      <div class="subcategory">Computer / Laptop Repair</div>
+      <div class="subcategory">TV / Radio Repair</div>
+      <div class="subcategory">Buying / Selling Devices</div>
+      <div class="subcategory">Skill Agents</div>
+      <div class="subcategory">Join Team / Give Work / Need Work</div>
     </div>
   </div>
+
+  <!-- Beauticology -->
   <div class="category" onclick="toggleSub(this)">
-    Mechanic Engineering
+    Beauty & Makeup
+    <div class="subcategory-list">
+      <div class="subcategory">Hairdresser</div>
+      <div class="subcategory">Makeup Artist</div>
+      <div class="subcategory">Workers / Clients</div>
+      <div class="subcategory">Join Team / Give Work / Need Work</div>
+    </div>
+  </div>
+
+  <!-- Mechanical / Motor Engineering -->
+  <div class="category" onclick="toggleSub(this)">
+    Mechanical / Motor Engineering
     <div class="subcategory-list">
       <div class="subcategory">Automobile Repair</div>
       <div class="subcategory">Machinery</div>
+      <div class="subcategory">Generators</div>
+      <div class="subcategory">Skill Agents</div>
+      <div class="subcategory">Join Team / Give Work / Need Work</div>
     </div>
   </div>
+
+  <!-- Agency / Buy & Sell -->
   <div class="category" onclick="toggleSub(this)">
-    Agents / Buy & Sell
+    Agency / Buy & Sell
     <div class="subcategory-list">
-      <div class="subcategory">Materials Seller</div>
-      <div class="subcategory">Livestock Seller</div>
-      <div class="subcategory">Property Transactions</div>
+      <div class="subcategory">Buying / Selling Land</div>
+      <div class="subcategory">Buying / Selling Houses</div>
+      <div class="subcategory">Buying / Selling Motors</div>
+      <div class="subcategory">Skill Agents</div>
+      <div class="subcategory">Join Team / Give Work / Need Work</div>
     </div>
   </div>
+
+  <!-- Training / Skills -->
   <div class="category" onclick="toggleSub(this)">
     Training & Skills
     <div class="subcategory-list">
@@ -96,28 +162,28 @@ footer { text-align:center; padding: 1rem; border-top:2px solid #FFD700; margin-
       <div class="subcategory">Secondary School</div>
       <div class="subcategory">University Level</div>
       <div class="subcategory">Adults / Online Training</div>
+      <div class="subcategory">Adults / Physical Training</div>
+      <div class="subcategory">Join Team / Give Work / Need Work</div>
     </div>
   </div>
+
 </div>
 
 <!-- Footer -->
 <footer>
-© 2026 WAH Imperium Royal Artisan Empire Global Limited. All rights reserved.
+  © 2026 WAH Imperium Royal Artisan Empire Global Limited. All rights reserved.
 </footer>
 
 <script>
-// Hide loading after 2 seconds
+// Hide loading after 1.5 seconds
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    document.getElementById('loading').style.display = 'none';
-  }, 2000);
+  setTimeout(() => { document.getElementById('loading').style.display = 'none'; }, 1500);
 });
 
 // Toggle subcategories
 function toggleSub(element) {
   const subList = element.querySelector('.subcategory-list');
-  if(subList.style.display === 'block') subList.style.display = 'none';
-  else subList.style.display = 'block';
+  subList.style.display = (subList.style.display === 'block') ? 'none' : 'block';
 }
 </script>
 
