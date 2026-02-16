@@ -114,3 +114,10 @@ footer { text-align:center; padding: 1rem; border-top:2px solid #FFD700; margin-
     }
   </script></body>
 </html>
+<script>
+fetch('logo.html')
+  .then(response => response.text())
+  .then(data => {
+    document.body.insertAdjacentHTML('afterbegin', data);
+  });
+</script>
