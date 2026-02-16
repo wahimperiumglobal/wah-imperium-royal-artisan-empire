@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building Construction | WAH IMPERIUM</title>
+<style>
+  body { background-color: black; color: gold; font-family: Arial, sans-serif; }
+  h1 { text-align: center; margin-top: 30px; }
+  .department-box { border: 2px solid gold; padding: 20px; margin: 20px auto; width: 80%; border-radius: 10px; }
+  .sub-department { margin-top: 10px; }
+</style>
+</head>
+<body>
+<h1>Building Construction</h1>
+
+<div class="department-box">
+  <h2>Sub-Departments</h2>
+  <div class="sub-department">Architect / Architectural Drawing</div>
+  <div class="sub-department">Engineering / Supervisor</div>
+  <div class="sub-department">Carpentry / Bricklayer / Welder</div>
+  <div class="sub-department">Plumber / Electrician / AC / Solar Installation</div>
+  <div class="sub-department">Furniture / Materials / POPs / Gerard</div>
+  <div class="sub-department">Buy & Sell / Rent Houses / Land</div>
+  <div class="sub-department">Skill Agents / Contractors</div>
+</div>
+
+</body>
+</html>
