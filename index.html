@@ -34,6 +34,7 @@
     </style>
 </head>
 <body>
+    <img src="./images/sadiq.jpeg" alt="WAH Imperium Logo" class="global-logo">
 
     <!-- Loading Screen -->
     <div id="loading">
@@ -49,10 +50,29 @@
 
     <script>
         setTimeout(function() {
+         
             document.getElementById("loading").style.display = "none";
             document.getElementById("main-content").style.display = "block";
-        }, 3000);
+        }, 60000);
     </script>
+
+</body>
+    ... your website content ...
+
+<div class="global-navigation">
+  <button onclick="goBack()">⬅ Back</button>
+  <button onclick="goNext()">Next ➡</button>
+</div>
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
+
+  function goNext() {
+    window.history.forward();
+  }
+</script>
 
 </body>
 </html>
