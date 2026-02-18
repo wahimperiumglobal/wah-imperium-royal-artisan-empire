@@ -1,177 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>WAH Imperium Royal Artisan Empire Global Limited</title>
+    <title>WAH IMPERIUM ROYAL ARTISAN EMPIRE GLOBAL LIMITED</title>
 
     <style>
-        /* General body style */
         body {
             margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #000; /* Royal black background */
-            color: #FFD700; /* Gold text for royal theme */
         }
 
-        /* Loading Screen */
+        /* LOADING SCREEN */
         #loading {
             position: fixed;
             width: 100%;
             height: 100vh;
-            background: #000; /* Black background */
+            background-color: #000; /* BLACK BACKGROUND */
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            z-index: 1000;
+            z-index: 9999;
         }
 
         #loading img {
-            width: 200px; /* Logo size during loading */
-            margin-bottom: 20px;
-        }
-
-        #loading h2 {
-            color: #FFD700; /* Gold text */
-            font-size: 24px;
-        }
-
-        /* Main Content Hidden First */
-        #main-content {
-            display: none;
-            padding: 20px;
-        }
-
-        /* Global Logo for all pages */
-        .global-logo {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            width: 80px; /* Default small size */
-            z-index: 999;
-        }
-
-        /* Homepage larger logo */
-        .home-logo {
             width: 200px;
         }
 
-        /* Navigation buttons */
-        .global-navigation {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
+        /* MAIN WEBSITE */
+        #website {
+            display: none;
+            background-color: #000; /* BLACK BACKGROUND */
+            color: gold;
+            min-height: 100vh;
+            text-align: center;
+            padding-top: 100px;
         }
 
-        .global-navigation button {
-            background-color: #FFD700;
-            color: #000;
-            border: none;
-            padding: 10px 15px;
-            margin-left: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: bold;
+        /* MAIN LOGO INSIDE WEBSITE */
+        .main-logo {
+            width: 250px; /* Bigger logo */
+            margin-bottom: 30px;
         }
 
-        /* Section styles */
-        section {
-            margin-top: 100px;
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
         }
 
-        h1, h2, p {
-            color: #FFD700; /* Gold text */
+        p {
+            font-size: 18px;
         }
     </style>
 </head>
-<body>
-    <!-- Global Logo (appears on all pages) -->
-    <img src="./images/sadiq.jpeg" alt="WAH Imperium Logo" class="global-logo">
 
-    <!-- Loading Screen -->
+<body>
+
+    <!-- LOADING SCREEN -->
     <div id="loading">
-        <img src="./images/sadiq.jpeg" alt="Royal Imperium Logo">
-        <h2>Loading Royal Empire...</h2>
+        <img src="./images/sadiq.jpeg">
     </div>
 
-    <!-- Main Content -->
-    <div id="main-content">
-        <!-- Homepage Section -->
-        <section id="home">
-            <img src="./images/sadiq.jpeg" alt="Royal Imperium Logo" class="home-logo">
-            <h1>WAH IMPERIUM ROYAL ARTISAN EMPIRE GLOBAL LIMITED</h1>
-            <p>Welcome to Version 1.0 Foundation.</p>
-            <p>Choose what you want to do:</p>
-            <ul>
-                <li><button onclick="showSection('buy')">Buy</button></li>
-                <li><button onclick="showSection('sell')">Sell</button></li>
-                <li><button onclick="showSection('rent')">Rent</button></li>
-                <li><button onclick="showSection('learn')">Learn / Training</button></li>
-                <li><button onclick="showSection('services')">Services / Projects</button></li>
-            </ul>
-        </section>
+    <!-- MAIN WEBSITE CONTENT -->
+    <div id="website">
 
-        <!-- Buy Section -->
-        <section id="buy" style="display:none;">
-            <h2>Buy Properties</h2>
-            <p>All locations, land, houses, offices, etc.</p>
-        </section>
+        <!-- SAME LOGO USED AGAIN (JUST BIGGER) -->
+        <img src="./images/sadiq.jpeg" class="main-logo">
 
-        <!-- Sell Section -->
-        <section id="sell" style="display:none;">
-            <h2>Sell Properties</h2>
-            <p>List your property to sell professionally.</p>
-        </section>
+        <h1>WAH IMPERIUM ROYAL ARTISAN EMPIRE GLOBAL LIMITED</h1>
 
-        <!-- Rent Section -->
-        <section id="rent" style="display:none;">
-            <h2>Rent Properties</h2>
-            <p>Rent houses, lands, offices, etc.</p>
-        </section>
+        <p>Welcome to the Official Royal Artisan Platform.</p>
+        <p>Empire. Power. Structure. Excellence.</p>
 
-        <!-- Learn / Training Section -->
-        <section id="learn" style="display:none;">
-            <h2>Learn / Training</h2>
-            <p>Register as student, adult, or school owner. Choose online or physical training.</p>
-        </section>
-
-        <!-- Services / Projects Section -->
-        <section id="services" style="display:none;">
-            <h2>Our Services</h2>
-            <p>Engineering, Livestock, Tailoring, Fashion, Carpentry, Bricklayer, Welding, etc.</p>
-        </section>
-
-        <!-- Navigation Buttons -->
-        <div class="global-navigation">
-            <button onclick="goBack()">⬅ Back</button>
-            <button onclick="goNext()">Next ➡</button>
-        </div>
     </div>
 
     <script>
-        // Loading screen timing (45 seconds = 45000 ms)
+        /* KEEPING YOUR PERFECT 45 SECONDS */
         setTimeout(function() {
             document.getElementById("loading").style.display = "none";
-            document.getElementById("main-content").style.display = "block";
-        }, 45000); 
-
-        // Navigation functions
-        function goBack() {
-            window.history.back();
-        }
-
-        function goNext() {
-            window.history.forward();
-        }
-
-        // Section switcher
-        function showSection(sectionId) {
-            const sections = ['home','buy','sell','rent','learn','services'];
-            sections.forEach(id => {
-                document.getElementById(id).style.display = (id === sectionId) ? 'block' : 'none';
-            });
-        }
+            document.getElementById("website").style.display = "block";
+        }, 45000);
     </script>
+
 </body>
 </html>
